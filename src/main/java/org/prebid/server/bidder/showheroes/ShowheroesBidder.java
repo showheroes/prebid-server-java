@@ -59,7 +59,7 @@ public class ShowheroesBidder implements Bidder<BidRequest> {
             PrebidVersionProvider prebidVersionProvider,
             JacksonMapper mapper) {
 
-        this.endpointUrl = HttpUtil.validateUrlSyntax(Objects.requireNonNull(endpointUrl));
+        this.endpointUrl = HttpUtil.validateUrl(Objects.requireNonNull(endpointUrl));
         this.currencyConversionService = Objects.requireNonNull(currencyConversionService);
         this.mapper = Objects.requireNonNull(mapper);
 
